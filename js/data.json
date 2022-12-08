@@ -1,0 +1,23 @@
+[
+    {
+       "dni":28656220,
+       "pass":"eli28656",
+       "nombre":"Elizabeth",
+       "apellido":"Olmos",
+       "id":1
+    },
+    {
+       "dni":25074870,
+       "pass":"luis25074",
+       "nombre":"Luis",
+       "apellido":"Guerci",
+       "id":2
+    },
+    {
+       "dni":5681654,
+       "pass":"mecha5681",
+       "nombre":"Angela",
+       "apellido":"Gonzalez",
+       "id":3
+    }
+ ]

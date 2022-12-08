@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserva tu Cancha</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <header class="header">
+
+      <nav class="navbar navbar-dark navbar-expand-lg bg-blue">
+        <div class="container-fluid">
+          <img src="./img/logoSF.png" alt="Logo del gestor">
+        </div>
+      </nav>
+
+    </header>
+    <h1 class="titulo">Bienvenidos al sistema de reserva de tu cancha</h1>
+    <main>
+      <div class="visible" id="inicio">
+        <section class="visible">
+          <div class="formLogin">
+            <form action="#" method="get" class="formucolor" id="resetForm">
+              <label>Ingrese su DNI para continuar</label>
+              <div class="form-floating mb-3 mt-3">
+                <input type="number" id="dni" placeholder="Documento" required>
+              </div>
+              <label>Ingrese su contraseña</label>
+              <div class="form-floating mb-3">
+                <input type="password" id="pass" placeholder="Contraseña" required>
+              </div>
+              <div class="botones">
+                <button id="btnLogin" type="submit" value="Ingresar">Ingresar</button>
+                <button id="btnReset" type="reset" value="Cancelar">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+      <br>
+
+      <div id="reserva">
+        <h2 class="secundarios">¡Bienvenido!</h2>
+        <br>
+        <div id="menuPrincipal">
+          <h2 class="secundarios">Elige algunas de estás opciones para continuar</h2>
+          <div class="botonesMenu">
+            <button id="btnNuevaReserva" type="button" value="nuevaReserva">Nueva Reserva</button>
+            <button id="btnExit" type="reset" value="exit">Salir</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="paraReservar">
+        <h2 class="secundarios">Reserva</h2>
+        <form class="desplegable">
+          <label class="desplegable">
+            Selecciona la fecha de tu reserva:
+            <input class="desplegable" type="date" name="reserva" min="2022-12-04" max="2023-03-31" id="diaConfirmado">
+          </label>
+          <select class=" desplegable" aria-label="Hora de inicio de la reserva" id="horaInicio">
+            <option selected>Selecciona la hora de inicio de tu reserva</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+          </select>
+
+          <select class="desplegable" aria-label="Hora de finalización la reserva" id="horaFin">
+            <option selected>Selecciona la hora de finalización de tu reserva</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+          </select>
+          <div class="botonesMenu">
+          <button id="btnConfirmar" type="submit" value="Confirmar">Confirmar</button>
+          <button id="btnConsultarReserva" type="button" value="consularReserva">Consultar Reserva</button>
+        </div>
+        </form>
+      </div>
+      <div class="container" id="mostrarUsuario">
+
+      </div>
+
+      <div class="container" id="mostrarReserva">
+        <!-- cuando me genera la reserva se habilita la información -->
+      </div>
+
+      <div class="container" id="consultarReserva">
+        <!-- cuando busca reservas en local-->
+      </div>
+
+
+      </div>
+
+
+
+      <div  id="loginIncorrecto">
+        <h2 class="titulo">Usuario no registrado, te vamos a pedir unos datos para registrarte</h2>
+        <br>
+        <form>
+          <label>DNI</label>
+          <div class="form-floating mb-3">
+            <input type="number" id="dniNuevo" placeholder="Documento" required>
+          </div>
+
+          <label>Contraseña</label>
+          <div class="form-floating mb-3">
+            <input type="password" id="passNuevo" placeholder="Contraseña" required>
+          </div>
+
+          <label>Nombre</label>
+          <div class="form-floating mb-3">
+            <input type="text" id="nombreNuevo" placeholder="Nombre" required>
+          </div>
+
+          <label>Apellido</label>
+          <div class="form-floating mb-3">
+            <input type="text" id="apellidoNuevo" placeholder="Apellido" required>
+          </div>
+
+
+          <div class="botonesMenu">
+          <button class="botones" id="btnRegistrarse" type="submit" value="Registro">Registrarse</button>
+          <button class="botones" id="btnCancelar" type="reset">Cancelar</button>
+        </div>
+        </form>
+      </div>
+
+      <div class="container" id="datoUsuarioNuevo">
+
+      </div>
+
+
+    </main>
+    <footer>
+      <div class="textoFooter">
+        <p>Desarrollado por TESA - © todos los derechos reservados</p>
+      </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  min-height: 20vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(206, 212, 218);
+  justify-content: space-between;
+  top: 0;
+  align-items: center;
+}
+
+.header img {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.titulo {
+  background-color: rgb(111, 114, 117);
+  flex-direction: column;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  font-weight: 200;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+.botonesMenu{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.botonesMenu button{
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  color: white;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+}
+
+
+.formLogin {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 40px;
+  text-align: justify;
+  font-family: "Secular One", sans-serif;
+  border: white 4px solid;
+  border-radius: 20px;
+  color: black;
+  background-color: rgba(250, 108, 177, 0.37);
+
+}
+
+.formLogin label {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.formLogin input {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color:white !important;
+  font-family: "Secular One", sans-serif;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.botonesMenu button {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  color: white;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 100px;
+  height: 70px;
+  }
+
+
+.botones {
+  display: flex;
+  font-family: "Secular One", sans-serif;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.botones button{
+  display:flex;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px;
+  width: 90px;
+  height: 40px;
+  font-family: "Secular One", sans-serif;
+  color: white;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+
+.secundarios{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  font-weight: 200;
+  text-shadow: rgb(129, 127, 127) 0.1em 0.1em 0.3em;
+}
+#menuPrincipal {
+  display: flex; /*va display none */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+}
+#reserva {
+  display: none; /*va display none */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+}
+
+#paraReservar {
+  display: none; /*va display none */
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+}
+
+.visible {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.desplegable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  border-radius: 20px;
+  border: white 4px solid;
+  background-color: rgba(250, 108, 177, 0.37);
+}
+
+.desplegable select{
+  text-align: center;
+  background-color: rgba(162, 80, 166, 0.593);
+}
+
+.desplegable label{
+  background-color: rgba(162, 80, 166, 0.593);
+}
+
+.desplegable button{
+  display:flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  color: white;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+#loginIncorrecto {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+
+  
+}
+#loginIncorrecto form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  padding: 40px;
+  width: 400px;
+  text-align: justify;
+  font-family: "Secular One", sans-serif;
+  border: white 4px solid;
+  border-radius: 20px;
+  color: black;
+  background-color: rgba(250, 108, 177, 0.37);
+  }
+
+  #loginIncorrecto label{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  #loginIncorrecto input{
+    display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color:white !important;
+  font-family: "Secular One", sans-serif;
+  background-color: rgba(162, 80, 166, 0.593);
+  border: white 2px solid;
+  font-size: 16px;
+  border-radius: 10px;
+  }
+
+  #loginIncorrecto button{
+    display:flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    width: 90px;
+    height: 40px;
+    font-family: "Secular One", sans-serif;
+    color: white;
+    background-color: rgba(162, 80, 166, 0.593);
+    border: white 2px solid;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+
+
+body {
+  background-color: rgb(248, 198, 222);
+}
+
+main {
+  display: flex;
+  margin: 0;
+  min-height: 70vh;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+}
+
+#mostrarUsuario{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+ font-size: 25px;
+  text-shadow: rgb(129, 127, 127) 0.1em 0.1em 0.3em;
+}
+
+#mostrarReserva {
+  display: none; /*va display none */
+  background-color: rgba(162, 80, 166, 0.593);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+  border-radius: 20px;
+  border: white 4px solid;
+  color: white;
+  text-shadow: #242423 0.1em 0.1em 0.2em;
+}
+
+#datoUsuarioNuevo {
+  display: none; /*va display none */
+  background-color: rgba(162, 80, 166, 0.593);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-family: "Secular One", sans-serif;
+  font-size: 25px;
+  border-radius: 20px;
+  color: white;
+  text-shadow: #242423 0.1em 0.1em 0.2em;
+}
+
+footer {
+
+  background-color: rgb(111, 114, 117);
+  border-top: #242423;
+  bottom: 0;
+  width: 100%;
+  min-height: 10vh;
+  color: white;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #fff;
+  color: rgba(162, 80, 166);
+  font-size: 1em;
+}
+
+.swal2-html-container {
+  font-family: "Secular One", sans-serif;
+  }
+
+.textoFooter {
+  flex-direction: column;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  font-family: "Secular One", sans-serif;
+  font-weight: 50;
+}
