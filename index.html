@@ -8,6 +8,7 @@
   <title>Reserva tu Cancha</title>
   <link rel="stylesheet" href="./css/style.css" />
   <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
   <script defer src="js/script.js"></script>
 </head>
 
@@ -63,7 +64,7 @@
         <form class="desplegable">
           <label class="desplegable">
             Selecciona la fecha de tu reserva:
-            <input class="desplegable" type="date" name="reserva" min="2022-12-04" max="2023-03-31" id="diaConfirmado">
+            <input class="desplegable" type="date" name="reserva" value="" min="" max="" id="diaConfirmado">
           </label>
           <select class=" desplegable" aria-label="Hora de inicio de la reserva" id="horaInicio">
             <option selected>Selecciona la hora de inicio de tu reserva</option>
@@ -97,9 +98,9 @@
             <option value="21">21</option>
           </select>
           <div class="botonesMenu">
-          <button id="btnConfirmar" type="submit" value="Confirmar">Confirmar</button>
-          <button id="btnConsultarReserva" type="button" value="consularReserva">Consultar Reserva</button>
-        </div>
+            <button id="btnConfirmar" type="submit" value="Confirmar">Confirmar</button>
+            <button id="btnConsultarReserva" type="button" value="consularReserva">Consultar Reserva</button>
+          </div>
         </form>
       </div>
       <div class="container" id="mostrarUsuario">
@@ -119,7 +120,7 @@
 
 
 
-      <div  id="loginIncorrecto">
+      <div id="loginIncorrecto">
         <h2 class="titulo">Usuario no registrado, te vamos a pedir unos datos para registrarte</h2>
         <br>
         <form>
@@ -145,9 +146,9 @@
 
 
           <div class="botonesMenu">
-          <button class="botones" id="btnRegistrarse" type="submit" value="Registro">Registrarse</button>
-          <button class="botones" id="btnCancelar" type="reset">Cancelar</button>
-        </div>
+            <button class="botones" id="btnRegistrarse" type="submit" value="Registro">Registrarse</button>
+            <button class="botones" id="btnCancelar" type="reset">Cancelar</button>
+          </div>
         </form>
       </div>
 

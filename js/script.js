@@ -37,8 +37,8 @@ class Usuario {
 }
 
 const usuariosBD = [
-  new Usuario(28656220, "eli28656", "Elizabeth", "Olmos"),
-  new Usuario(25074870, "luis25074", "Luis", "Guerci"),
+  new Usuario(28656220, "eli28656", "Elizabeth", "Olmos", 1),
+  new Usuario(25074870, "luis25074", "Luis", "Guerci", 2),
 ];
 
 class Reserva {
@@ -131,6 +131,15 @@ btnLogin.addEventListener("click", (e) => {
 
       document.querySelector("#inicio").style.display = "none";
       document.querySelector("#reserva").style.display = "flex";
+
+      const inputFecha = document.querySelectorAll('input[type="date"]');
+      const DateTime = luxon.DateTime;
+      let fechaInicio = DateTime.now().toFormat("yyyy-MM-dd");
+      let fechaFin = DateTime.now().plus({ months: 4 }).toFormat("yyyy-MM-dd");
+      inputFecha.forEach((element) => {
+        element.setAttribute("min", fechaInicio);
+        element.setAttribute("max", fechaFin);
+      });
       btnNuevaReserva.addEventListener("click", (e) => {
         e.preventDefault();
         document.querySelector("#reserva").style.display = "none";
@@ -138,6 +147,27 @@ btnLogin.addEventListener("click", (e) => {
         const fechaConfirmada = document.querySelector("#diaConfirmado");
         const horaInicioConfirmada = document.querySelector("#horaInicio");
         const horaFinConfirmada = document.querySelector("#horaFin");
+        fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          body: JSON.stringify({
+            body: "Te sugerimos revisar el clima antes de realizar tu reserva",
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) =>
+            Swal.fire({
+              title: "Revisar clima",
+              icon: "question",
+              iconColor: "rgba(162, 80, 166",
+              html: '<a target="_blank" href="https://www.accuweather.com/es/ar/c%C3%B3rdoba/8869/weather-forecast/8869">links</a> ',
+              showConfirmButton: false,
+              //timer:2000,
+              text: data.body,
+            })
+          );
 
         btnConfirmar.addEventListener("click", (e) => {
           e.preventDefault();
@@ -194,16 +224,15 @@ btnLogin.addEventListener("click", (e) => {
               costo = (iterator.horaFin - iterator.horaInicio) * 1400;
               datosReserva.innerHTML = `<p>SE HA GENERADO LA SIGUIENTE RESERVA<br>Fecha:  ${iterator.fechaConfirmada}<br>Desde las: ${iterator.horaInicio} hs.<br>Hasta las: ${iterator.horaFin} hs.<br>El costo del alquiler será de $${costo} <br>Gracias por usar nuestro gestor de reservas</p> <br>`;
             }
-            setInterval("location.reload()", 20000);
+            setInterval("location.reload()", 15000);
           }
         });
 
         btnConsultarReserva.addEventListener("click", (e) => {
           e.preventDefault();
-  
+
           //traer la reserva del storage
         });
-
       });
       btnExit.addEventListener("click", (e) => {
         e.preventDefault();
@@ -224,7 +253,6 @@ btnLogin.addEventListener("click", (e) => {
         setTimeout(resetForm.reset(), 3501);
         borrarDatos();
       });
-
     } else {
       Swal.fire({
         text: "usuario y/o contraseña inválida",
@@ -267,7 +295,7 @@ btnLogin.addEventListener("click", (e) => {
           });
         } else {
           for (const elemento of usuarioRecuperado) {
-            datosNuevos.innerHTML = `<p>¡Te registraste con éxito!<br>Tus datos son:<br>Nombre: ${elemento.nombre}<br>Apellido: ${elemento.apellido}<br>D.N.I. N°: ${elemento.dni}<br><b>¡BIENVENIDO!</b></p> `;
+            datosNuevos.innerHTML = `<p>¡Te registraste con éxito!<br>Tus datos son:<br>Nombre: ${elemento.nombre}<br>Apellido: ${elemento.apellido}<br>D.N.I. N°: ${elemento.dni}<br><b>¡BIENVENID@!</b></p> `;
           }
         }
       });
